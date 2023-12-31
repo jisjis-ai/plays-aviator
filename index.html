@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>JIS Galaxy Story Apps</title>
+  <style>
+    /* Adicione um estilo inicial para ocultar o texto */
+    .app-description {
+      display: none;
+    }
+    /* Adicione um estilo para mostrar o texto quando a classe 'expanded' está presente */
+    .expanded .app-description {
+      display: block;
+    }
+    /* Adicione margem ao ícone "Ver Mais" para movê-lo mais para baixo */
+    #ver-mais-link i {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JIS Galaxy Story Apps</h1>
+  </header>
+  <main id="app-container">
+    <!-- App Aviator Hacker -->
+    <div class="app-card">
+      <img src="app.png" alt="App Icon">
+      <h2>☬ˢAVIATOR HACKER 9.0.0☬</h2>
+      <!-- Adicione um identificador à div para facilitar a manipulação com JavaScript -->
+      <div class="app-description">
+    
+      </div>
+      <!-- Adicione um ícone de "Ver Mais" e um identificador ao link -->
+      <a href="app/app.apk" download id="ver-mais-link" onclick="toggleDescription()">Instalar <i class="fas fa-chevron-down"></i></a>
+    </div>
+
+    <!-- App Predictor Gratis -->
+    <div class="app-card">
+      <img src="predictor-icon.png" alt="Predictor Gratis Icon">
+      <h2>Predictor Aviator Gratis</h2>
+      <div class="app-description">
+   
+        </p>
+      </div>
+      <a href="app/predictor.apk" download id="ver-mais-link-predictor" onclick="toggleDescription()">Instalar <i class="fas fa-chevron-down"></i></a>
+    </div>
+  </main>
+  <script>
+    // Adicione um script JavaScript para manipular a exibição do texto ao clicar no link
+    function toggleDescription() {
+      // Adicione ou remova a classe 'expanded' para mostrar ou ocultar o texto
+      document.querySelector('.app-card').classList.toggle('expanded');
+    }
+  </script>
+</body>
+</html>
